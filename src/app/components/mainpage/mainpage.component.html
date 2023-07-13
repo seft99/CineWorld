@@ -1,0 +1,10 @@
+<app-toolbar></app-toolbar>
+<div class="background"></div>
+<div class="main-container">
+  <mat-card *ngFor="let movie of movies" class="movie" [ngClass]="{ 'active': movie.hovered }" (mouseover)="toggleHover(movie)" (mouseout)="toggleHover(movie)">
+    <img [src]="movie.img" alt="{{ movie.name }}" style="height: 100%;">
+    <div class="overlay">
+      <p>{{ movie.name }}</p>
+    </div>
+  </mat-card>
+</div>
